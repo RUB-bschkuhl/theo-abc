@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keyboard Trainer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="app__intro">
+        <h1>Tastentrainer</h1>
+        <p>
+          Tippe oder klicke Buchstaben (A&ndash;Z) und Zahlen (0&ndash;9). Jeder
+          Tastendruck wird groß angezeigt, vorgelesen und anschließend unten als
+          Verlauf abgelegt.
+        </p>
+        <p class="app__hint">
+          Lege deine Audiodateien in den Ordner <code>audio/</code> ab (z.&nbsp;B.
+          <code>audio/a.mp3</code>, <code>audio/0.mp3</code>).
+        </p>
+      </section>
+
+      <section class="mode-switch" aria-label="Modusauswahl">
+        <button
+          class="mode-switch__button mode-switch__button--active"
+          data-mode="explore"
+          type="button"
+        >
+          Freies Spielen
+        </button>
+        <button class="mode-switch__button" data-mode="play" type="button">
+          Play
+        </button>
+      </section>
+
+      <section class="display" aria-live="polite">
+        <div class="display__char" id="active-char" aria-label="Aktiver Buchstabe"></div>
+      </section>
+
+      <section class="controls" aria-label="Eingabe per Klick">
+        <div class="controls__grid" id="control-buttons"></div>
+      </section>
+
+      <section class="history" aria-label="Verlauf">
+        <header class="history__header">
+          <h2>Verlauf</h2>
+          <button class="history__clear" id="clear-history" type="button">Verlauf löschen</button>
+        </header>
+        <div class="history__items" id="history"></div>
+      </section>
+
+      <div class="confetti" id="confetti" aria-hidden="true"></div>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
