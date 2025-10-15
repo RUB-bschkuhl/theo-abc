@@ -1,6 +1,6 @@
 const allowedChars = [
   ..."abcdefghijklmnopqrstuvwxyz".split("").map((char) => char.toLowerCase()),
-  ..."0123456789".split("")
+  ..."123456789".split("")
 ];
 
 const activeCharEl = document.getElementById("active-char");
